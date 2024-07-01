@@ -55,8 +55,8 @@ int tamanhoLista(ListaLinear lista)
 
 void mostrarCelula(Celula celula)
 {
-    printf("Chave.....: %u", celula.chave);
-    printf("Dado......: %u", celula.dado);
+    printf("\nChave.....: %u", celula.chave);
+    printf("\nDado......: %u", celula.dado);
 }
 
 void mostrarLista(ListaLinear lista)
@@ -323,8 +323,18 @@ Celula remChave(ListaLinear * lista, Celula celula){
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
-    printf("Teste");
+    Celula cel = {1,13};
+    mostrarCelula(cel);
+
+    ListaLinear lista;
+
+    criarListaVazia(&lista);
+    mostrarLista(lista);
+
+    insInicio(&lista, cel);
+    mostrarLista(lista);
+    
     return 0;
 }
